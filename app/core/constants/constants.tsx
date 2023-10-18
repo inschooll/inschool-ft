@@ -13,5 +13,8 @@ export default {
   brainPink,
   bookStack,
   mathsCalculation,
-  doubleArrowUp
+  doubleArrowUp,
+  menu,
+  cancel,
+  googleLogo
 };
