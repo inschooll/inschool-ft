@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,6 +14,43 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+} */
+
+*,
+::before,
+::after {
+  border-color: transparent; /* 2 */
+}
+
+@layer base {
+  :root {
+    --color-bkg: 255 255 255;
+    --color-bkg-compliment: 245 245 245;
+    --color-content-main: 12 12 12;
+    --color-content-sub: 45 45 45;
+    --color-primary: 85 161 255;
+    --color-primary-deep: 46 134 222;
+  }
+  :root[data-theme="light"] {
+    --color-bkg: 255 255 255;
+    --color-bkg-compliment: 245 245 245;
+    --color-content-main: 12 12 12;
+    --color-content-sub: 45 45 45;
+  }
+  :root[data-theme="dark"] {
+    --color-bkg: 12 12 12;
+    --color-bkg-compliment: 26 26 26;
+    --color-content-main: 255 255 255;
+    --color-content-sub: 245 245 245;
+  }
+  /* @media(prefers-color-scheme: dark) {
+    :root {
+      --color-bkg: 1 1 1;
+      --color-bkg-compliment: 26 26 26;
+      --color-content-main: 255 255 255;
+      --color-content-sub: 242 242 242;
+    }
+  } */
 }
 
 body {
